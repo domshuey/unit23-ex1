@@ -1,0 +1,18 @@
+div {
+    background-color: yellow;
+     width: 200px;
+     text-align: center;
+     
+}
+div img {
+    width: 100px;
+    height: 100px;
+}
+
+img {
+    display: inline-block;
+}
+
+p {
+    font: 3rem;
+}
