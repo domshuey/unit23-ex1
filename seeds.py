@@ -22,11 +22,22 @@ post3 = Post(title='Cupcake Recipe', content='This is my recipe for the best cup
 post4 = Post(title='Woodworking 101', content='Here"s Part 1 to how to work with wood!', user_id=1)
 post5 = Post(title='I lift heavy things', content='Look. I lift weight. It heavy.', user_id=4)
 
+
+# adding tags
+tag1 = Tag(name='LOL')
+tag2 = Tag(name='Epic')
+tag3 = Tag(name='wtf')
+tag4 = Tag(name='NSFW')
+
 # adding users first bc fk
 db.session.add_all([user1,user2, user3, user4])
 db.session.commit()
 
 # finally, adding posts
 db.session.add_all([post1, post2, post3, post4, post5])
+db.session.commit()
+
+# adding tags
+db.session.add([tag1,tag2,tag3,tag4])
 db.session.commit()
 

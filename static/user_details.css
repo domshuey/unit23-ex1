@@ -21,3 +21,8 @@ div button {
     display: inline-block;
     margin: 0;
 }
+
+.content {
+    height: 150px;
+    width: 200px;
+}

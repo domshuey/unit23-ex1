@@ -12,14 +12,19 @@
         <h1>Edit Post</h1>
         <form action="/posts/{{post.id}}/edit" method="post">
             <label for="title">Edit Title</label>
-            <input type="text" name="title" id="title" placeholder="{{post.title}}">
+            <input type="text" name="title" id="title" value="{{post.title}}">
+            <br>
             <label for="content"> Edit Content</label>
-            <input type="text" name="content" id="content">
+            <input type="text" name="content" id="content" class="content">
+            <br>
+            <label for="tag">Add Tag to Post</label>
+            {% for tag in tags %}
+                <li><input type="checkbox" name="tags" id="tag" value='{{tag.id}}'>{{tag.name}}</li>
+            {% endfor %}
             <button>Edit</button>
+            <a href="/users/{{post.user_id}}">Cancel</a>
         </form>
-        <form action="/users">
-            <button>Cancel</button>
-        </form>
+        
     </div>
 </body>
 </html>

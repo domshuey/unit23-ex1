@@ -1,18 +1,17 @@
 {% extends 'base_html.html' %}
 
-{% block title %} {{user.first_name}} {{user.last_name}} {% endblock %}
+{% block title %} {{user.full_name}} {% endblock %}
 
 {% block content %}
 
 <h2>Edit User Details</h2>
-<h3>Make sure to re-enter all information as you edit user profile!</h3>
 <form method="post" action="/users/{{user.id}}/edit">
         <label for="first-name">Edit First Name</label>
-    <input type="text" name="first_name" id='first-name' placeholder="{{user.first_name}}">
+    <input type="text" name="first_name" id='first-name' value="{{user.first_name}}">
         <label for="last-name">Edit Last Name</label>
-    <input type="text" name="last_name" id="last-name" placeholder="{{user.last_name}}">
+    <input type="text" name="last_name" id="last-name" value="{{user.last_name}}">
         <label for="image-url">Edit Profile Picture</label>
-    <input type="text" name="image_url" id="image-url" placeholder="{{user.image_url}}">
+    <input type="text" name="image_url" id="image-url" value="{{user.image_url}}">
     <br>
     <button>Save</button>
 </form>
